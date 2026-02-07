@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mes Notes</string>
+    <string name="splash_subtitle">Gestion des notes d\'examen</string>
+    <string name="add_note">Ajouter une note</string>
+    <string name="edit_note">Modifier la note</string>
+    <string name="delete">Supprimer</string>
+    <string name="save">Enregistrer</string>
+    <string name="course_name">Nom du cours</string>
+    <string name="score_hint">Note (sur 20)</string>
+    <string name="semester">Semestre</string>
+    <string name="note_details">Informations de la note</string>
+    <string name="fill_all_fields">Veuillez remplir tous les champs</string>
+    <string name="invalid_score">Note invalide</string>
+    <string name="score_range">La note doit être entre 0 et 20</string>
+    <string name="note_added">Note ajoutée avec succès</string>
+    <string name="note_updated">Note modifiée avec succès</string>
+    <string name="delete_title">Supprimer la note</string>
+    <string name="delete_message">Êtes-vous sûr de vouloir supprimer cette note ?</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="no_notes">Aucune note enregistrée.\nAppuyez sur + pour ajouter une note.</string>
+    <string name="averages">Moyennes</string>
+    <string name="overall_average">Moyenne Générale</string>
+    <string name="averages_by_semester">Moyennes par semestre</string>
+    <string name="no_data">Aucune donnée disponible</string>
+</resources>

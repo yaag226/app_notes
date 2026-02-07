@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Notebook body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,25 L78,25 C80,25 82,27 82,29 L82,83 C82,85 80,87 78,87 L30,87 C28,87 26,85 26,83 L26,29 C26,27 28,25 30,25 Z" />
+
+    <!-- Notebook lines -->
+    <path
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1"
+        android:pathData="M35,40 L73,40" />
+    <path
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1"
+        android:pathData="M35,48 L73,48" />
+    <path
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1"
+        android:pathData="M35,56 L73,56" />
+    <path
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1"
+        android:pathData="M35,64 L73,64" />
+    <path
+        android:strokeColor="#90CAF9"
+        android:strokeWidth="1"
+        android:pathData="M35,72 L73,72" />
+
+    <!-- Pencil -->
+    <path
+        android:fillColor="#FF6F00"
+        android:pathData="M65,30 L72,30 L72,78 L68.5,84 L65,78 Z" />
+    <path
+        android:fillColor="#FFA726"
+        android:pathData="M65,30 L72,30 L72,36 L65,36 Z" />
+
+    <!-- A+ text -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M40,42 L44,34 L48,42 M41,40 L47,40"
+        android:strokeColor="#1565C0"
+        android:strokeWidth="2" />
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M50,35 L55,35 M52.5,33 L52.5,37"
+        android:strokeColor="#1565C0"
+        android:strokeWidth="1.5" />
+</vector>
