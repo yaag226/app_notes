@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Moyennes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Moyennes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="totalNotes === 0" class="empty-state">
+    <ion-icon name="school-outline" class="empty-icon"></ion-icon>
+    <h2>Aucune donnee</h2>
+    <p>Ajoutez des notes pour voir vos moyennes</p>
+  </div>
+
+  <div *ngIf="totalNotes > 0">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="trophy-outline"></ion-icon>
+          Moyenne Generale
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="average-display">
+          <span class="average-value" [class.passing]="generalAverage >= 10" [class.failing]="generalAverage < 10">
+            {{ generalAverage | number:'1.2-2' }}/20
+          </span>
+          <span class="note-count">{{ totalNotes }} note(s)</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="school-outline"></ion-icon>
+          Moyennes par Semestre
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let sem of semesters">
+            <ion-label>
+              <h2>{{ sem.name }}</h2>
+              <p>{{ sem.count }} note(s)</p>
+            </ion-label>
+            <ion-badge slot="end" [color]="sem.average >= 10 ? 'success' : 'danger'">
+              {{ sem.average | number:'1.2-2' }}/20
+            </ion-badge>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

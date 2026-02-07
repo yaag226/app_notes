@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Mes Notes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Mes Notes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div *ngIf="notes.length === 0" class="empty-state">
+    <ion-icon name="library-outline" class="empty-icon"></ion-icon>
+    <h2>Aucune note</h2>
+    <p>Appuyez sur + pour ajouter votre premiere note</p>
+  </div>
+
+  <ion-list *ngIf="notes.length > 0">
+    <ion-item-sliding *ngFor="let note of notes">
+      <ion-item (click)="editNote(note)" button>
+        <ion-label>
+          <h2>{{ note.course }}</h2>
+          <p>Semestre: {{ note.semester }}</p>
+        </ion-label>
+        <ion-badge slot="end" [color]="note.score >= 10 ? 'success' : 'danger'">
+          {{ note.score }}/20
+        </ion-badge>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="primary" (click)="editNote(note)">
+          <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="deleteNote(note)">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addNote()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

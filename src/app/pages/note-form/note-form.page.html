@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ isEdit ? 'Modifier la note' : 'Ajouter une note' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-item>
+    <ion-input
+      label="Cours"
+      labelPlacement="floating"
+      placeholder="Nom du cours"
+      [(ngModel)]="course"
+      type="text"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="Note (/20)"
+      labelPlacement="floating"
+      placeholder="Score obtenu"
+      [(ngModel)]="score"
+      type="number"
+      min="0"
+      max="20"
+      step="0.25"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select
+      label="Semestre"
+      labelPlacement="floating"
+      placeholder="Choisir le semestre"
+      [(ngModel)]="semester"
+      interface="action-sheet"
+    >
+      <ion-select-option *ngFor="let s of semesters" [value]="s">{{ s }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="block" (click)="saveNote()" class="ion-margin-top" color="primary">
+    {{ isEdit ? 'Modifier' : 'Ajouter' }}
+  </ion-button>
+</ion-content>
